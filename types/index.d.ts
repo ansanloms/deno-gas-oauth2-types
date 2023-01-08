@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.2
 
-/// <reference types="google-apps-script" />
+/// <reference types="https://raw.githubusercontent.com/ansanloms/deno-gas-types/v1.0.56/mod.d.ts" />
 
 declare namespace GoogleAppsScriptOAuth2 {
     interface OAuth2 {

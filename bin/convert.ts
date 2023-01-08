@@ -40,10 +40,14 @@ const expand = async (contentPath: string, dir: string) => {
 
       await Deno.writeTextFile(
         p,
-        code.replace(
-          /\/\/\/\s*<reference\s*path="([^"]+)"\s*\/>/g,
-          '/// <reference types="./$1" />',
-        ),
+        code
+          .replace(
+            '/// <reference types="google-apps-script" />',
+            '/// <reference types="https://raw.githubusercontent.com/ansanloms/deno-gas-types/v1.0.56/mod.d.ts" />',
+          ).replace(
+            /\/\/\/\s*<reference\s*path="([^"]+)"\s*\/>/g,
+            '/// <reference types="./$1" />',
+          ),
       );
     }
   }
